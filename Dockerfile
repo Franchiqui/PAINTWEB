@@ -11,6 +11,8 @@ COPY . .
 
 EXPOSE 8000
 
+
+CMD web: python drawing_app.py
 # CMD ["python", "main.py"]  # Comenté esta línea porque no sé si tienes un archivo main.py
 
 # No olvides ejecutar el comando para iniciar tu aplicación cuando ejecutes el contenedor
