@@ -1,1 +1,1 @@
-web: python drawing_app.py
+python drawing_app.py
