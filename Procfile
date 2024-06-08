@@ -1,1 +1,1 @@
-web: gunicorn 'app:Drawing_App()'
+web: gunicorn 'app:drawing_app()'
