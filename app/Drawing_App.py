@@ -9,7 +9,6 @@ import io
 import base64
 
 def crear_app():
-
     app = Flask(__name__)
 
     @app.route('/', methods=['POST'])
@@ -248,6 +247,9 @@ def crear_app():
     window.mainloop()
     return app
 
+    app.run()
+
+
 if __name__ == '__main__':
     app = crear_app()
-    app.run()
+    
