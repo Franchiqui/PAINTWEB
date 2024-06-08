@@ -11,3 +11,4 @@ colorchooser
 messagebox
 ImageGrab
 Image
+tk
