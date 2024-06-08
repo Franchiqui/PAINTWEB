@@ -5,6 +5,7 @@ import tkinter as tk
 from tkinter import filedialog, simpledialog, font, ttk
 from tkinter import colorchooser, messagebox
 from PIL import Image, ImageTk, ImageGrab, ImageOps
+from Drawing_App import app
 import io
 import base64
 
@@ -249,10 +250,8 @@ def drawing_app():
     window.mainloop()
     return drawing_app
 
-    app.run()
-
 
 if __name__ == '__main__':
     app = drawing_app()
-    
+    app.run(host='0.0.0.0', port=4000)
     
