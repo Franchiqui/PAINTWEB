@@ -18,7 +18,9 @@ def crear_app():
         image_data = io.BytesIO(base64.b64decode(image_data))
         img = Image.open(image_data)
         img.save('static/drawing.png')
-        return 'Image saved successfully'
+        return "Drawing App Backend is running!"
+    
+    
 
     window = Tk()
     window.title("Drawing App")
@@ -252,4 +254,5 @@ def crear_app():
 
 if __name__ == '__main__':
     app = crear_app()
+    app.run(host='0.0.0.0', port=10000)
     
