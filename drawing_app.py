@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request
 import time
-from tkinter import *
 import tkinter as tk
 from tkinter import filedialog, simpledialog, font, ttk
 from tkinter import colorchooser, messagebox
