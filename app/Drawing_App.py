@@ -247,7 +247,7 @@ def drawing_app():
     canvas.tag_bind("movable", "<ButtonRelease-1>", disable_movement)
 
     window.mainloop()
-    return app
+    return drawing_app
 
     app.run()
 
