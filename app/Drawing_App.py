@@ -8,7 +8,7 @@ from PIL import Image, ImageTk, ImageGrab, ImageOps
 import io
 import base64
 
-def crear_app():
+def drawing_app():
     app = Flask(__name__)
 
     @app.route('/', methods=['POST'])
@@ -253,6 +253,6 @@ def crear_app():
 
 
 if __name__ == '__main__':
-    app = crear_app()
+    app = drawing_app()
     app.run(host='0.0.0.0', port=4000)
     
