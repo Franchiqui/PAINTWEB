@@ -83,8 +83,8 @@ selected_color = "black"
 previous_color = "black"
 background_color = "white"
 fill_color = None
-
 image_refs = []
+current_object = None
 
 def start_drawing(event):
     global is_drawing, last_x, last_y, start_x, start_y
