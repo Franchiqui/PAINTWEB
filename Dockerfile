@@ -11,7 +11,7 @@ WORKDIR /code
 
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
-# Copia el cÃ³digo de la aplicaciÃ³n
+
 COPY . /app
 
 COPY . .
