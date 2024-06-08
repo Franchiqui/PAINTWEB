@@ -1,1 +1,1 @@
-web: gunicorn app:app
+web: python drawing_app.py
