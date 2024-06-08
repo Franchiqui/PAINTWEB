@@ -5,6 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drawing App</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #fff;
+        }
+        .toolbar {
+            background-color: #222;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #444;
+            color: #fff;
+            padding: 5px 10px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="range"] {
+            width: 150px;
+            margin: 0 10px;
+        }
+        input[type="color"] {
+            margin: 0 10px;
+        }
+        input[type="text"] {
+            padding: 5px;
+            margin: 0 10px;
+        }
+        select {
+            padding: 5px;
+            margin: 0 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>Drawing App</h1>

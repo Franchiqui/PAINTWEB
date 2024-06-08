@@ -29,19 +29,10 @@ function draw(e) {
     ctx.lineWidth = brushSize;
     ctx.lineCap = 'round';
     ctx.strokeStyle = selectedColor;
-
     ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
     ctx.stroke();
     ctx.beginPath();
     ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
-}
-
-function selectBrush() {
-    selectedColor = document.getElementById('brushColor').value;
-}
-
-function selectEraser() {
-    selectedColor = '#FFFFFF';
 }
 
 function clearCanvas() {
@@ -69,7 +60,6 @@ function addText() {
     const size = brushSize;
     const x = canvas.width / 2;
     const y = canvas.height / 2;
-
     ctx.font = size + 'px ' + font;
     ctx.fillStyle = selectedColor;
     ctx.textAlign = 'center';
@@ -77,34 +67,13 @@ function addText() {
     ctx.fillText(text, x, y);
 }
 
-// Variables globales para las herramientas y colores
+// Funciones para seleccionar herramientas y colores
 let currentTool = 'brush';
 let strokeColor = '#000000';
 let fillColor = '#ffffff';
 
-// Funciones para seleccionar herramientas y colores
-function selectBrush() {
-    currentTool = 'brush';
-}
-
-function selectEraser() {
-    currentTool = 'eraser';
-}
-
-function selectLine() {
-    currentTool = 'line';
-}
-
-function selectCurve() {
-    currentTool = 'curve';
-}
-
-function selectRectangle() {
-    currentTool = 'rectangle';
-}
-
-function selectCircle() {
-    currentTool = 'circle';
+function selectTool(tool) {
+    currentTool = tool;
 }
 
 function changeStrokeColor() {
@@ -114,5 +83,3 @@ function changeStrokeColor() {
 function changeFillColor() {
     fillColor = document.getElementById('fillColor').value;
 }
-
-
