@@ -1,33 +1,10 @@
-from flask import Flask, render_template, request
 import time
+from tkinter import *
 import tkinter as tk
 from tkinter import filedialog, simpledialog, font, ttk
 from tkinter import colorchooser, messagebox
 from PIL import Image, ImageTk, ImageGrab, ImageOps
 import io
-import base64
-
-
-app = Flask(__name__)
-
-# Function to convert the canvas drawing to a PNG image and save it
-def save_image(image_data):
-    image_data = base64.b64decode(image_data.split(',')[1])
-    image = Image.open(io.BytesIO(image_data))
-    image.save('drawing.png')
-    return 'Image saved'
-
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-@app.route('/save_image', methods=['POST'])
-def save_image_route():
-    image_data = request.form['image']
-    return save_image(image_data)
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
 
 window = Tk()
 window.title("Drawing App")
