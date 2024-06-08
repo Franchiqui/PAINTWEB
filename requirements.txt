@@ -11,4 +11,3 @@ colorchooser
 messagebox
 ImageGrab
 Image
-Flask
